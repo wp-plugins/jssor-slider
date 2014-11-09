@@ -12,7 +12,7 @@ Easy to use WordPress Responsive Slider plugin.
 == Description ==
 Creating slideshows with WordPress Jssor Slider is fast and easy. Simply upload images from the admin or drag and drop them into
 place, set slide captions, links and description fields all from one page, use the provided shortcode or template include to 
-easily embed slideshows in your blog. A demo can be found here [here](http://phpcentre.net/wordpress-jssor-slider/)
+easily embed slideshows in your blog. A demo can be found [here](http://phpcentre.net/wordpress-jssor-slider/)
 
 = Plugin Features =
 * Simple, easy to use interface – perfect for individual users.
@@ -40,6 +40,27 @@ easily embed slideshows in your blog. A demo can be found here [here](http://php
 <pre>
  &lt;?php echo do_shortcode("[jssorslider id=1764]"); ?&gt; 
 </pre>
+= Browser Compatibility =
+
+* IE6+
+* Chrome 3+
+* Firefox 2+
+* Safari 3.1+
+* Opera 10+
+* Mobile browsers( iOS, Android, Windows, Windows Surface and Mac are all supported)
+
+= Credits =
+
+[jQuery Jssor Slider](https://github.com/jssor/jquery-slider)
+
+[Plupload](https://github.com/moxiecode/plupload)
+
+[Datatable](https://github.com/DataTables/DataTables)
+
+[Tipsy](https://github.com/jaz303/tipsy)
+
+[Jquery Validation Plugin](https://github.com/jzaefferer/jquery-validation)
+
 
 == Installation ==
 1. Download the zip file of the plugin and extract the content.
