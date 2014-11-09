@@ -81,16 +81,12 @@ easily embed slideshows in your blog. A demo can be found [here](http://phpcentr
 == Credits ==
 
 [jQuery Jssor Slider](https://github.com/jssor/jquery-slider)
-
 [Plupload](https://github.com/moxiecode/plupload)
-
 [Datatable](https://github.com/DataTables/DataTables)
-
 [Tipsy](https://github.com/jaz303/tipsy)
-
 [Jquery Validation Plugin](https://github.com/jzaefferer/jquery-validation)
 
 
-
+== Changelog ==
 = 1.0 =
 * Initial Release
