@@ -1,4 +1,4 @@
-=== Wordpress Jssor Slider Plugin ===
+===  Jssor Slider  ===
 Tags:  jssor slider, wordpress slider, wordpress slideshow, responsive, responsive slider, responsive slides, slider, slideshow<br/>
 Requires at least: 3.5 
 Tested up to: 3.9.1 
@@ -37,9 +37,8 @@ easily embed slideshows in your blog. A demo can be found here [here](http://php
 </pre>
 
 = Theme file  Example =
-
 <pre>
-<?php echo do_shortcode("[jssorslider id=1764]"); ?> 
+ &lt;?php echo do_shortcode("[jssorslider id=1764]"); ?&gt; 
 </pre>
 
 == Installation ==
