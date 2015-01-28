@@ -215,7 +215,8 @@ class JssorSliderPlugin {
 	public function frontend_scripts() {
 		
 		wp_enqueue_script( 'jssor.core.js', JSSOR_SL_PLUGIN_URL . '/assets/js/jssor.slider.mini.js', array( 'jquery' ), JSSORSLIDER_VERSION);
-		
+		wp_enqueue_style( 'jssor-css', JSSOR_SL_PLUGIN_URL . '/assets/css/jssor-slider.css', false, JSSORSLIDER_VERSION);
+	
 	}
 	
 	/**
