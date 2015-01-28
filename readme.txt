@@ -2,7 +2,7 @@
 Tags:  jssor slider, wordpress slider, wordpress slideshow, responsive, responsive slider, responsive slides, slider, slideshow<br/>
 Requires at least: 3.5 
 Tested up to: 4.1 
-Stable tag: 1.0 
+Stable tag: 1.1 
 License: GNU-License 
 License URI: www.gnu.org/licenses 
 
