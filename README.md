@@ -3,7 +3,7 @@ Contributors: PhP Centre <br/>
 Tags:  jssor slider, wordpress slider, wordpress slideshow, responsive, responsive slider, responsive slides, slider, slideshow<br/>
 Requires at least: 3.5 <br/>
 Tested up to: 3.9.1 <br/>
-Stable tag: 1.0 <br/>
+Stable tag: 1.1 <br/>
 License: GNU-License <br/>
 License URI: www.gnu.org/licenses <br/>
 
@@ -76,6 +76,11 @@ https://github.com/jaz303/tipsy
 Jquery Validation Plugin <br/>
 https://github.com/jzaefferer/jquery-validation
 
+## Changelog ##
+* Added option to preserve aspect ratio of images
+* Fixed the inline css
 
+# 1.0 #
+* Initial Release
 
 

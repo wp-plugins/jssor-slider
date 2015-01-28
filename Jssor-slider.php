@@ -2,13 +2,13 @@
 /*
  * Jssor Slider. Slideshow plugin for WordPress.
  * Plugin Name: Jssor Slider
- * Plugin URI:	http://www.phpcentre.net
+ * Plugin URI:	http://www.phpcentre.net/wordpress-jssor-slider
  * Description: Easy to use slideshow plugin.
- * Version: 1.0
+ * Version: 1.1
  * Author: PhP Centre
  * Author URI: phpcentre.net
  * License: GPL-2.0+
- * Copyright: 2014 PhP Centre
+ * Copyright: 2015 PhP Centre
  * Text Domain: jssor_slider
  *
  */

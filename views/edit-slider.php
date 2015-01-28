@@ -232,6 +232,17 @@
 													</div>
 													<div class="widget-layout-body">
 														<div class="layout-control-group">
+															<label class="layout-control-label" title="This option will preserve the aspect ratio of the images"><?php _e( "Aspect Ratio", jssor_slider ); ?> </label>
+															<div class="layout-controls-checkbox">
+																<?php
+																	$checked = ( $settings['aspect_ratio'] == 1 ) ? 'checked="checked"' : '';		
+																?>
+																<input type="checkbox" name="slider_aspect_ratio" value="1" <?php echo $checked ?> />
+															</div>
+														</div>
+													</div>
+													<div class="widget-layout-body">
+														<div class="layout-control-group">
 															<label class="layout-control-label" title="Duration for Slide in milliseconds"><?php _e( "Duration", jssor_slider ); ?></label>
 															<div style="margin-left:10px;" class="layout-controls">
 																<input type="number" min="0" max="9999" class="layout-span5" id="slider_width" name="slider_width"

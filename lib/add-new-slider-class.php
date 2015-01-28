@@ -137,11 +137,12 @@
 					'bullet_action' => $sliderSets[10],
 					'bullet_spacing' => $sliderSets[11],
 					'swipe' => $sliderSets[12],
-					'auto_play' => $sliderSets[13],
-					'pause_hover' => $sliderSets[14],
-					'use_arrows' => $sliderSets[15],
-					'use_bullets' => $sliderSets[16],
-					'responsive' => $sliderSets[17]
+					'aspect_ratio' => $sliderSets[13],
+					'auto_play' => $sliderSets[14],
+					'pause_hover' => $sliderSets[15],
+					'use_arrows' => $sliderSets[16],
+					'use_bullets' => $sliderSets[17],
+					'responsive' => $sliderSets[18]
 				);
 			 
 				$sliderSettings2 = serialize( $sliderSettings );
