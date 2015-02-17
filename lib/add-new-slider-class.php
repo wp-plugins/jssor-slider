@@ -37,6 +37,7 @@
 											<input type="text" style="margin-bottom:5px;" class="slide_title" id="slide_title" placeholder="Caption"></input>
 											<textarea	id="slide_desc" placeholder="Description"></textarea>
 											<input type="text" class="slide_url"	id="slide_url" placeholder="URL" />
+											<div class="new_window"><label>New Window<input id="slider_new_window" type="checkbox" /></div>
 											<input type="hidden" id="slide_id" value="' . $slideid . '" />
 										</div>
 										<div class="tab tab-1" style="display:none">
