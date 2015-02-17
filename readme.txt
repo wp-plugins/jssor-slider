@@ -2,7 +2,7 @@
 Tags:  jssor slider, wordpress slider, wordpress slideshow, responsive, responsive slider, responsive slides, slider, slideshow<br/>
 Requires at least: 3.5 
 Tested up to: 4.1 
-Stable tag: 1.1 
+Stable tag: 1.2 
 License: GNU-License 
 License URI: www.gnu.org/licenses 
 
@@ -88,6 +88,11 @@ easily embed slideshows in your blog. A demo can be found [here](http://phpcentr
 
 
 == Changelog ==
+= 1.2 =
+* Slide images are now properly linked to urls
+* Added option to open links in new window
+* Few css fixes
+
 = 1.1 =
 * Added option to preserve aspect ratio of images
 * Fixed the inline css

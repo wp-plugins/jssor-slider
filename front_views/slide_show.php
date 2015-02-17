@@ -37,6 +37,7 @@
 	$pauseH = ( $settings['pause_hover'] ) ? ( $settings['pause_hover'] ):	'1';
 	$responsive = ( $settings['responsive'] );
 	$swipe = ( $settings['swipe'] ) ? ( $settings['swipe'] ) : '0';
+	$cursor =  ( $settings['swipe'] ) ? 'move' : 'default';
 	$descH = $sliderH - 50;
 
 	$use_arrows = $settings['use_arrows'];
@@ -142,17 +143,28 @@
 
 	<div id="slider_container_<?php echo $slider_id; ?>" class="jssor_slider_outer_container" style="width:<?php echo $sliderW; ?>px; height:<?php echo $sliderH; ?>px;">
 		<!-- Slides Container -->
-		<div u="slides" class="jssor_slider_slides" style="width:<?php echo $sliderW; ?>px; height:<?php echo $sliderH; ?>px;">
+		<div u="slides" class="jssor_slider_slides" style="width:<?php echo $sliderW; ?>px; height:<?php echo $sliderH; ?>px ;cursor:<?php echo $cursor; ?>;">
 			<!-- Slide -->
 			<?php for ( $flag = 0;$flag < count($slides); $flag++ ) : ?>	
 			<div>
-				<img u="image" src="<?php echo stripcslashes(JSSOR_SL_THUMB_URL . $slides[$flag]->thumbnail_url); ?>" />
-				<?php 	
+				<?php 
+					if ( $slides[$flag]->url ) : 
+						$target = ( $slides[$flag]->new_window ) ? '_blank': '_self';
+				?>
+					<a target="<?php echo $target; ?>" u="image" href="<?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->url ) ) ); ?>"><img  src="<?php echo stripcslashes(JSSOR_SL_THUMB_URL . $slides[$flag]->thumbnail_url); ?>" /></a>
+				<?php else : ?>
+					<img  u="image" src="<?php echo stripcslashes(JSSOR_SL_THUMB_URL . $slides[$flag]->thumbnail_url); ?>" />
+				<?php
+					endif;
 					if ( $fillmode == '0' ) :
 						if ( $slides[$flag]->title ) : 
+							if ( $slides[$flag]->url ) :	
 				?>
-				<div u="caption" t="<?php echo $result2[$slides[$flag]->caption_in]; ?>" t2="<?php echo $result2[$slides[$flag]->caption_out]; ?>" class="jssor_slider_caption"><?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->title ) ) ); ?></div>
+					<a target="<?php echo $target; ?>" href="<?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->url ) ) ); ?>"><div u="caption" t="<?php echo $result2[$slides[$flag]->caption_in]; ?>" t2="<?php echo $result2[$slides[$flag]->caption_out]; ?>" class="jssor_slider_caption"><?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->title ) ) ); ?></div></a>
+				<?php else : ?>	
+					<div u="caption" t="<?php echo $result2[$slides[$flag]->caption_in]; ?>" t2="<?php echo $result2[$slides[$flag]->caption_out]; ?>" class="jssor_slider_caption"><?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->title ) ) ); ?></div>
 				<?php 	
+							endif;
 						endif;
 						if ( $slides[$flag]->description ) :
 				?>
@@ -160,7 +172,7 @@
 					<div class="jssor_slider_desc_inner_div" style="width: <?php echo $sliderW; ?>px;"></div>
 					<div class="jssor_slider_desc_text_div" style="width: <?php echo $sliderW; ?>px;">
 						<?php if ( $slides[$flag]->url ) : ?>
-							<a target="_blank" href="<?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->url ) ) ); ?>"><?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->description ) ) ); ?></a>
+							<a target="<?php echo $target; ?>" href="<?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->url ) ) ); ?>"><?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->description ) ) ); ?></a>
 						<?php else : ?>
 							<?php echo html_entity_decode( stripcslashes( htmlspecialchars( $slides[$flag]->description ) ) ); ?>
 						<?php endif; ?>		

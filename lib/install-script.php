@@ -4,30 +4,27 @@
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	
 	if ( !is_dir(JSSOR_MAIN_DIR ) ) {
-
 		wp_mkdir_p( JSSOR_MAIN_DIR );
 	}
 
 	if ( !is_dir( JSSOR_MAIN_UPLOAD_DIR ) ) {
-
 		wp_mkdir_p(JSSOR_MAIN_UPLOAD_DIR);
 	}
 
 	if( !is_dir( JSSOR_MAIN_THUMB_DIR ) ) {
-
 		wp_mkdir_p( JSSOR_MAIN_THUMB_DIR );
 	}
 	
 	
-	
 	if ( count( $wpdb->get_var( "SHOW TABLES LIKE '" . JssorSliderPlugin::jssor_sliders() . "'" ) ) == 0 ) {
-		
 		create_table_sliders();
 	}
 	
 	if ( count( $wpdb->get_var( "SHOW TABLES LIKE '" . JssorSliderPlugin::jssor_slides() . "'" ) ) == 0 ) {
-		
 		create_table_slides();
+	} else {
+		$sql = "ALTER TABLE " . JssorSliderPlugin::jssor_slides() . " ADD new_window INTEGER( 10 ) AFTER url";
+		$wpdb->query($sql);
 	}
 
 	function create_table_sliders(){
@@ -57,6 +54,7 @@
 					sorting_order INTEGER(20),
 					date DATE,
 					url	VARCHAR(250),
+					new_window INTEGER(10),
 					slide_name TEXT NOT NULL,
 					caption_in TEXT,
 					caption_out	TEXT,
@@ -69,4 +67,6 @@
 		dbDelta( $sql );
 		
 	}
+	
+	add_option( 'jssor_slider_version', '1,2' );
 ?>

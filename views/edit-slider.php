@@ -118,7 +118,11 @@
 																			<input type="text" style="margin-bottom:5px;" id="slide_title" class="slide_title"	value="<?php echo html_entity_decode(stripcslashes(htmlspecialchars($slides[$flag]->title))); ?>" placeholder="Caption"></input>
 																			<textarea id="slide_desc" placeholder="Description"><?php echo html_entity_decode(stripcslashes(htmlspecialchars($slides[$flag]->description))); ?></textarea>
 																			<input type="text" class="slide_url" id="slide_url" value="<?php echo html_entity_decode(stripcslashes(htmlspecialchars($slides[$flag]->url))); ?>" placeholder="URL"></input>
-																			<input type="hidden"	id="slide_id" value="<?php echo $slides[$flag]->slide_id; ?>" ></input>
+																			<?php
+																				$checked = ( $slides[$flag]->new_window == 1 ) ? 'checked="checked"' : '';		
+																			?>
+																			<div class="new_window"><label>New Window<input id="slider_new_window"  <?php echo $checked; ?> type="checkbox" /></div>
+																			<input type="hidden"id="slide_id" value="<?php echo $slides[$flag]->slide_id; ?>" ></input>
 																		</div>
 																		<div class="tab tab-1" style="display:none">
 																			<div id="caption_div" style="margin:27px 0 26px 0;">
@@ -522,6 +526,8 @@
 					row_data.push(slide_desc);
 					var slide_url = jQuery(el).find('#slide_url').val();
 					row_data.push(slide_url);
+					var new_window = jQuery(el).find('#slider_new_window').is(':checked');
+					row_data.push(new_window);
 					var caption_in = jQuery(el).find('#cap_trans_in').val();
 					row_data.push(caption_in);
 					var caption_out = jQuery(el).find('#cap_trans_out').val();

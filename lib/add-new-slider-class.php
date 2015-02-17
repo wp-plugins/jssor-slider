@@ -167,7 +167,7 @@
 						(
 							$wpdb->prepare
 								(
-									"UPDATE " . JssorSliderPlugin::jssor_slides() . " SET title = %s, description = %s, url = %s, caption_in = %s, caption_out = %s, description_in = %s, description_out = %s ,slide_trans = %s, date = CURDATE() WHERE slide_id = %d",
+									"UPDATE " . JssorSliderPlugin::jssor_slides() . " SET title = %s, description = %s, url = %s, new_window = %d, caption_in = %s, caption_out = %s, description_in = %s, description_out = %s ,slide_trans = %s, date = CURDATE() WHERE slide_id = %d",
 									htmlspecialchars($field[1]),
 									htmlspecialchars($field[2]),
 									$field[3],
@@ -176,6 +176,7 @@
 									$field[6],
 									$field[7],
 									$field[8],
+									$field[9],
 									$field[0]
 								)
 						); 

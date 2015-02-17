@@ -4,7 +4,7 @@
  * Plugin Name: Jssor Slider
  * Plugin URI:	http://www.phpcentre.net/wordpress-jssor-slider
  * Description: Easy to use slideshow plugin.
- * Version: 1.1
+ * Version: 1.2
  * Author: PhP Centre
  * Author URI: phpcentre.net
  * License: GPL-2.0+
@@ -18,7 +18,7 @@
 		exit; // disable direct access
 	}
 
-	if( !defined( 'JSSORSLIDER_VERSION' ) ) define( 'JSSORSLIDER_VERSION', '1.0' );
+	if( !defined( 'JSSORSLIDER_VERSION' ) ) define( 'JSSORSLIDER_VERSION', '1.2' );
 
 	if ( !defined( 'JSSOR_CONTENT_DIR' ) ) define( 'JSSOR_CONTENT_DIR', ABSPATH . 'wp-content' );
 	if ( !defined( 'JSSOR_MAIN_DIR' ) ) define( 'JSSOR_MAIN_DIR', ABSPATH . 'wp-content/jssor-slider' );

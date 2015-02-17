@@ -62,7 +62,8 @@ class JssorSliderPlugin {
 		add_action( 'admin_menu', array( $this, 'create_global_menus_for_js_slider' ) );
 		add_action( 'media_buttons_context', array( $this, 'insert_jssorslider_button' ) );
 		add_action( 'admin_footer', array( $this, 'jssorslider_admin_footer') );
-		
+		//add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ) );
+        
 	}
 	
 	

@@ -2464,7 +2464,7 @@ legend + .layout-control-group {
 }
 
 .col-2 .tabs-content .slide_url,
- .col-2 .tabs-content .slide_title{
+.col-2 .tabs-content .slide_title{
     width: 100%;
     margin: 0;
     padding: 4px;
@@ -2473,6 +2473,26 @@ legend + .layout-control-group {
     resize: none;
     font-size: 12px;
 	box-shadow:none;
+}
+
+.col-2 .tabs-content .new_window {
+	position: relative;
+	float: right;
+	padding: 0;
+	color: #a9a9a9;
+	height: 0;
+	bottom: 22px;
+	right: 0;
+}
+
+.col-2 .tabs-content .new_window label {
+	width: 120px;
+	text-align: right;
+	font-size: 11px;
+}
+
+.col-2 .tabs-content .new_window input {
+	margin-left: 3px;
 }
 
 .layout-control-group .layout-controls input:focus{

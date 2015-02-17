@@ -4,8 +4,7 @@
 	position: relative;
 }
 
-.jssor_slider_slides {
-	cursor: move; 
+.jssor_slider_slides { 
 	position: absolute; 
 	left: 0px; 
 	top: 0px;
