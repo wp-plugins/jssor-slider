@@ -46,7 +46,7 @@
 	$arrowSkin = JssorSliderHelper::arrowSkin( $arrow )[0];
 	$arrowWidth = JssorSliderHelper::arrowSkin( $arrow )[1];
 	$arrowHeight = JssorSliderHelper::arrowSkin( $arrow )[2];
-	$arrowBorder = JssorSliderHelper::arrowSKin ( $arrow )[3];
+	$arrowBorder = ( JssorSliderHelper::arrowSKin ( $arrow )[3] ) ? '0' : '8';
 	$arrowL = 'jssor' . $arrow . 'l';
 	$arrowR = 'jssor' . $arrow . 'r';
 
@@ -210,9 +210,9 @@
 			<?php echo $arrowSkin; ?>
 		</style>
 		<!-- Arrow Left -->
-		<span u="arrowleft" class="<?php echo $arrowL; ?>" style="width:<?php echo $arrowWidth; ?>px; height:<?php echo $arrowHeight; ?>px; top: 45%; left: <?php echo $arrowBorder? '0' : '8'?>px;"></span>
+		<span u="arrowleft" class="<?php echo $arrowL; ?>" style="width:<?php echo $arrowWidth; ?>px; height:<?php echo $arrowHeight; ?>px; top: 45%; left: <?php echo $arrowBorder ?>px;"></span>
 		<!-- Arrow Right -->
-		<span u="arrowright" class="<?php echo $arrowR; ?>" style="width:<?php echo $arrowWidth; ?>px; height:<?php echo $arrowHeight; ?>px; top: 45%; right: <?php echo $arrowBorder? '0' : '8'?>px"></span>
+		<span u="arrowright" class="<?php echo $arrowR; ?>" style="width:<?php echo $arrowWidth; ?>px; height:<?php echo $arrowHeight; ?>px; top: 45%; right: <?php echo $arrowBorder ?>px"></span>
 		<?php 	endif; 
 			endif;
 		?>
