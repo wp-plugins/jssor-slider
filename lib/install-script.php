@@ -28,6 +28,7 @@
 			$sql = "ALTER TABLE " . JssorSliderPlugin::jssor_slides() . " ADD new_window INTEGER( 10 ) AFTER url";
 			$wpdb->query($sql);
 		}
+		update_option( 'jssor_slider_version', '1.3' );
 	} else if( $version == '1,2' ) {
 		update_option( 'jssor_slider_version', '1.3' );
 	}
