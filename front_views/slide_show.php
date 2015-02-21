@@ -46,7 +46,7 @@
 	$arrowSkin = JssorSliderHelper::arrowSkin( $arrow )[0];
 	$arrowWidth = JssorSliderHelper::arrowSkin( $arrow )[1];
 	$arrowHeight = JssorSliderHelper::arrowSkin( $arrow )[2];
-	$arrowBorder = ( JssorSliderHelper::arrowSKin ( $arrow )[3] ) ? '0' : '8';
+	$arrowBorder = ( isset( JssorSliderHelper::arrowSKin ( $arrow )[3] ) ) ? '0' : '8';
 	$arrowL = 'jssor' . $arrow . 'l';
 	$arrowR = 'jssor' . $arrow . 'r';
 
